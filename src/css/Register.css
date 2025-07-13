@@ -21,9 +21,8 @@ body {
     margin-bottom: 20vh;
 }
 
-/* Título com efeito de luz */
-.LogoType {
-    
+/* Título com efeito de luz (Join FinBalance) */
+.container h1 {
     font-size: 28px;
     font-weight: bold;
     margin-right: 100vh;
@@ -64,13 +63,13 @@ form {
 }
 
 /* Título do form */
-.title-Login {
+.title-Register {
     font-size: 32px;
     margin-bottom: 20px;
 }
 
 /* Inputs */
-.userLogin-Form-Control input {
+.userRegister-form-control input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -81,12 +80,12 @@ form {
     font-size: 16px;
 }
 
-.userLogin-Form-Control input::placeholder {
+.userRegister-form-control input::placeholder {
     color: #ccc;
 }
 
 /* Botão */
-.userLogin-submit-button {
+.userRegister-create-button {
     width: 100%;
     padding: 12px;
     background-color: #0066cc;
@@ -99,11 +98,11 @@ form {
     transition: background 0.3s ease;
 }
 
-.userLogin-submit-button:hover {
+.userRegister-create-button:hover {
     background-color: #0055aa;
 }
 
-/* Link de registro */
+/* Link de login */
 form p {
     margin-top: 20px;
     font-size: 14px;
