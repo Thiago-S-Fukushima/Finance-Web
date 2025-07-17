@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import axios from 'axios';
 import './css/Login.css';
 
 const Login = () => {
@@ -10,7 +11,14 @@ const Login = () => {
 const toLogin = () => {
     e.preventDefault();
 
-    axios.post('',loginData)
+    axios.post('http://localhost:5501/Login',loginData)
+    .then(res => {
+        console.log(res.data);
+    })
+
+    .err(err => {
+        console.log(err);
+    })
 }
 
     return (
