@@ -11,7 +11,7 @@ const Login = () => {
 const toLogin = () => {
     e.preventDefault();
 
-    axios.post('http://localhost:5501/Login',loginData)
+    axios.post('http://localhost:3306/login',loginData)
     .then(res => {
         console.log(res.data);
     })
