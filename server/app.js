@@ -30,6 +30,8 @@ app.use(session({
 const authRoutes = require('./routes/authRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 
+app.use(authRoutes); // <- Adicione esta linha
+
 //inicialização do servidor.
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`)
@@ -49,3 +51,5 @@ app.post("/Register",  (req, res) => {
         console.log(err)
     })
 })
+
+

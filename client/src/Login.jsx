@@ -11,12 +11,16 @@ const Login = () => {
 const toLogin = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:5173/login',loginData)
+    axios.post('http://localhost:5500/login',loginData, {withCredentials: true})
     .then(res => {
-        console.log(res.data);
+        if (res.data.success) {
+            window.location.href = "./Dashboard"
+        } else {
+            alert("Tente novamente");
+        }
     })
 
-    .err(err => {
+    .catch(err => {
         console.log(err);
     })
 }
@@ -34,7 +38,7 @@ const toLogin = (e) => {
                         <input id="password" value={loginData.password} onChange={(e) => setLoginData({...loginData, password: e.target.value})} 
                         type="password" name="password" placeholder="Password" required/>
                     </div>
-                <button className="userLogin-submit-button" onClick={() => toLogin()}>Sign In</button>
+                <button className="userLogin-submit-button" onClick={toLogin}>Sign In</button>
                 <p>Don't have an account yet? <a href="/Register">Create Account</a></p>
             </form>           
         </div>
