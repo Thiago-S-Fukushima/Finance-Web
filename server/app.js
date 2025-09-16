@@ -37,19 +37,19 @@ app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`)
 });
 
-app.post("/Register",  (req, res) => {
+/*
+app.post("/register",  (req, res) => {
     console.log("Dados recebidos:", req.body);
     const registerUser = {
         name: req.body.name, // Capturando agora o Nome de usuário para incluir no banco
         email: req.body.email,
         password: req.body.password
     }
-
     db.insert(registerUser).into("users").then(data => {
         console.log(data)
     }).catch(err => {
         console.log(err)
     })
-})
+})*/
 
 

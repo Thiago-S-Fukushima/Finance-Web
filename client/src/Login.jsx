@@ -4,6 +4,7 @@ import './css/Login.css';
 
 const Login = () => {
     const [loginData, setLoginData] = useState ({
+    name:"",
     email:"",
     password:""
 });
@@ -23,7 +24,7 @@ const toLogin = (e) => {
     .catch(err => {
         console.log(err);
     })
-}
+};
 
     return (
         <>
